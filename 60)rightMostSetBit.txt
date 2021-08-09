@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main
+{
+    public static int fun( int n)
+    {
+     return n & (n - 1); 
+} 
+	public static void main(String[] args) {
+		Scanner sc=new Scanner (System.in);
+		int n=sc.nextInt();
+        System.out.printf("%d",fun(n));
+	}
+}
+
+
+************************************************************************
+
+def fun(n):
+    return n & (n - 1)
+n = int(input())
+ans = fun(n)
+print(ans)

@@ -1,0 +1,38 @@
+import java.util.*;
+public class Main
+{
+public static  void  Neon(int num)
+{
+    int square = 0,sum_digits = 0;
+    square = (num * num);
+    while (square != 0)
+    {
+        sum_digits = (sum_digits + (square % 10));
+        square = (square / 10);
+    }
+    if(sum_digits == num)
+    System.out.printf("Yes");
+    else
+    System.out.printf("No");
+}
+	public static void main(String[] args) {
+	      Scanner s = new Scanner(System.in);
+	    int data = 0, NeonNumber = 0;
+    data=s.nextInt();
+     Neon(data);
+}
+}
+
+
+********************************************************************
+
+num = int(input())
+sqr = num*num 
+sumOfDigit = 0
+while sqr>0:
+    sumOfDigit =sumOfDigit + sqr%10
+    sqr = sqr//10
+if (num == sumOfDigit):
+    print("Yes")
+else:
+    print("No")

@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+     int num, flag = 0;
+     Scanner s = new Scanner(System.in);
+     num = s.nextInt();
+     for(int i=2 ; i < num ; i++) {
+      if(num%i == 0) {
+         System.out.println("No");
+         flag = 1;
+         break;
+      }
+   }
+   if(flag == 0) {
+      System.out.println("Yes");
+   }
+	}
+}
+
+
+***************************************************************
+
+number = int(input())
+if number > 1:
+    for i in range(2, number):
+        if (number % i) == 0:
+            print("No")
+            break
+    else:
+        print("Yes")
+else:
+    print("No")

@@ -1,0 +1,53 @@
+import java.util.*;
+public class Main
+{
+    public static int length(int n){    
+    int c = 0;    
+    while(n != 0){    
+        c++;    
+        n/=10;    
+    }    
+    return c;    
+}   
+	public static void main(String[] args) {
+	      Scanner s = new Scanner(System.in);
+	      int num,sum = 0,rem = 0, n;  
+    num=s.nextInt();
+    int len = length(num);    
+    n = num;    
+    while(num > 0){    
+        rem = num%10;    
+        sum = sum + (int)Math.pow(rem,len);    
+        num = num/10;    
+        len--;    
+    }    
+    if(sum == n)    
+        System.out.printf("Yes");    
+    else    
+        System.out.printf("No");  
+	}	  
+}
+
+
+*************************************************************************************
+
+
+def calculateLength(n):    
+    length = 0;    
+    while(n != 0):    
+        length = length + 1;    
+        n = n//10;    
+    return length;    
+num = int(input());    
+rem = sum = 0;    
+len = calculateLength(num);    
+n = num;    
+while(num > 0):    
+    rem = num%10;    
+    sum = sum + int(rem**len);    
+    num = num//10;    
+    len = len - 1;    
+if(sum == n):    
+    print("Yes");    
+else:    
+    print("No");

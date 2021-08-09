@@ -1,0 +1,50 @@
+import java.util.*;
+public class Main
+{
+public static void main(String[] args)
+{
+    int i,j,len;
+    char temp;
+     Scanner s=new Scanner(System.in);
+     String ch=s.nextLine();
+    char []str=ch.toCharArray();
+    len=str.length;
+    for(i=0,j=len-1;i<j;i++,j--)
+    {
+        while(!(str[i]>=65 &&str[i]<=122))
+        i++;
+        while(!(str[j]>=65 &&str[j]<=122))
+        j--;
+        temp=str[i];
+        str[i]=str[j];
+        str[j]=temp;
+    }
+    for(i=0;i<len;i++)
+    System.out.printf("%c",str[i]);
+    
+}
+}
+
+
+*********************************************************
+
+def preserveSpace(str):
+    n = len(str)
+    str = list(str)
+    start = 0
+    end = n - 1
+    while(start < end):
+        if(str[start] == ' ' or str[start]=="@" or str[start]==":" or str[start]==";" or str[start]=="?" or str[start]=="$" or str[start]=="#" or str[start]=="!" or str[start]=="~" or str[start]=="^"):
+            start += 1
+            continue
+        elif(str[end] == ' 'or str[end]=="@" or str[end]==":" or str[end]==";" or str[end]=="?" or str[end]=="#" or str[end]=="!" or str[end]=="$" or str[end]=="^" or str[end]=="~"):
+            end -= 1
+            continue
+        else:
+            str[start], str[end] = (str[end],str[start])
+            start += 1
+            end -= 1
+    print(''.join(str))
+str = input()
+preserveSpace(str);
+

@@ -1,0 +1,38 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+    int num1, num2, flag_var, i, j;
+    num1=s.nextInt();
+    num2=s.nextInt();
+   for(i=num1+1; i<num2; ++i)
+   {
+      flag_var=0;
+      for(j=2; j<=i/2; ++j)
+      {
+         if(i%j==0)
+         {
+            flag_var=1;
+            break;
+         }
+      }
+      if(flag_var==0)
+         System.out.printf("%d ",i);
+  }
+	}
+}
+
+************************************************************************
+
+
+lower,upper=map(int,input().split())
+cnt=0
+for num in range(lower+1, upper):
+    cnt=0;
+    for i in range(2, num):
+           if (num % i) == 0:
+               cnt+=1 
+               break
+    if cnt==0:
+        print(num,end=" ")

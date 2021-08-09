@@ -1,0 +1,42 @@
+import java.util.*;
+public class Main { 
+	public static void countEvenOdd(int n) 
+{ 
+    int even_count = 0; 
+    int odd_count = 0; 
+    while (n > 0)  
+    { 
+        int rem = n % 10; 
+        if (rem % 2 == 0) 
+            even_count++; 
+        else
+            odd_count++; 
+        n = n / 10; 
+    } 
+    System.out.printf("ODD %d\n",odd_count);
+    System.out.printf("EVEN %d",even_count); 
+    
+} 
+	public static void main(String[] args) 
+	{ 
+	     Scanner s=new Scanner(System.in);
+	     int n=s.nextInt();
+	     countEvenOdd(n);
+ 
+	} 
+} 
+
+
+********************************************************************************
+
+
+n=input()
+cnt,cnt1=0,0
+for i in n:
+    d=int(i)
+    if(d%2==0):
+        cnt+=1
+    else:
+        cnt1+=1 
+print("ODD",cnt1)
+print("EVEN",cnt)

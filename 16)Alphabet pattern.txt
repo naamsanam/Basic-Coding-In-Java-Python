@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main
+{
+
+	public static void main(String[] args) {
+	      Scanner s = new Scanner(System.in);
+	    int n,i,j;
+	    char c;
+	    n=s.nextInt();
+for(i=1;i<=n;i++,System.out.printf("\n"))
+{
+    c='A';
+    for(j=1;j<=i;j++)
+    System.out.printf("%c",c++);
+}
+}
+}
+
+**************************************************************
+
+n=int(input())
+s=65+n
+for i in range(65,s):
+    for j in range(65,i+1):
+        print(chr(j),end="")
+    print()

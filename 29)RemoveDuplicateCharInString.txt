@@ -1,0 +1,35 @@
+import java.util.*;
+public class Main { 
+    public static void main(String[] args) {
+         Scanner s=new Scanner(System.in);
+        String str1 =s.nextLine();
+        System.out.println(removeDuplicateChars(str1));
+    }
+ 
+    private static String removeDuplicateChars(String sourceStr) {
+            char[] chrArray = sourceStr.toCharArray();
+        String targetStr = "";
+     for (char value : chrArray) {
+            if (targetStr.indexOf(value) == -1) {
+                targetStr += value;
+            }
+        }
+        return targetStr;
+    }
+}
+
+**********************************************************************************
+
+def removeDuplicate(str, n): 
+	index = 0
+	for i in range(0, n): 
+		for j in range(0, i + 1): 
+			if (str[i] == str[j]): 
+				break
+		if (j == i): 
+			str[index] = str[i] 
+			index += 1
+	return "".join(str[:index]) 
+str= input()
+n = len(str) 
+print(removeDuplicate(list(str), n)) 

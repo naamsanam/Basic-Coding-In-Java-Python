@@ -1,0 +1,43 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+    String date=s.next();
+    String[]ar=date.split("/");
+    int dd=Integer.parseInt(ar[0]);
+    int mm=Integer.parseInt(ar[1]);
+    int yy=Integer.parseInt(ar[2]);
+    if(yy>=1900 && yy<=9999)
+    {
+        if(mm>=1 && mm<=12)
+        {
+            if((dd>=1 && dd<=31) && (mm==1 || mm==3 || mm==5 || mm==7 || mm==8 || mm==10 || mm==12))
+                System.out.printf("Valid");
+            else if((dd>=1 && dd<=30) && (mm==4 || mm==6 || mm==9 || mm==11))
+                System.out.printf("Valid");
+            else if((dd>=1 && dd<=28) && (mm==2))
+                System.out.printf("Valid");
+            else if(dd==29 && mm==2 && (yy%400==0 ||(yy%4==0 && yy%100!=0)))
+                System.out.printf("Valid");
+            else
+                System.out.printf("Invalid");
+        }
+	}
+}
+}
+
+*********************************************************************************
+
+import datetime
+inputDate = input()
+day,month,year = inputDate.split('/')
+isValidDate = True
+try :
+    datetime.datetime(int(year),int(month),int(day))
+except ValueError :
+    isValidDate = False
+if(isValidDate) :
+    print ("Valid")
+else :
+    print ("Invalid")

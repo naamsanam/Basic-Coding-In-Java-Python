@@ -1,0 +1,32 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+   int num,n,m;
+    int iVar;
+    double fVar;
+     n=s.nextInt();
+     m=s.nextInt();
+  num=n*m;
+    fVar=Math.sqrt(num);
+    iVar=(int)fVar;
+ 
+    if(iVar==fVar)
+        System.out.printf("Yes");
+    else
+        System.out.printf("No");
+	}
+}
+
+
+**************************************************************
+
+
+import math
+n,m=map(int,input().split())
+s=n*m
+if(math.sqrt(s)%1==0):
+    print("Yes")
+else:
+    print("No")

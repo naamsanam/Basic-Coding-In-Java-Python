@@ -1,0 +1,39 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	     int num, originalNum, remainder, n=0;
+	     float result=0f;
+	     Scanner s = new Scanner(System.in);
+	     num = s.nextInt();
+	     originalNum = num;
+	     for (originalNum = num; originalNum != 0; ++n) {
+             originalNum /= 10;
+   }
+   for (originalNum = num; originalNum != 0; originalNum /= 10) {
+       remainder = originalNum % 10;
+      result += Math.pow(remainder, n);
+   }
+   if ((int)result == num)
+      System.out.println("Yes");
+   else
+      System.out.println("No");
+  }
+}
+
+************************************************************
+
+
+num = input()
+order = len(num)
+sum = 0
+temp = int(num)
+while temp > 0:
+   digit = temp % 10
+   sum += digit ** order
+   temp //= 10
+if int(num) == sum:
+   print("Yes")
+else:
+   print("No");

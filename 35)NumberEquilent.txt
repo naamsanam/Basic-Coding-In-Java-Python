@@ -1,0 +1,114 @@
+import java.util.*;
+public class Main
+{
+public static void convert_to_words(char[] num)
+{
+	int len = num.length; 
+	String[] single_digits = new String[]{ "Zero", "One", 
+										"Two", "Three", "Four",
+										"Five", "Six", "Seven", 
+											"Eight", "Nine"};
+	String[] two_digits = new String[]{"", "Ten", "Eleven", "Twelve", 
+										"Thirteen", "Fourteen",
+										"Fifteen", "Sixteen", "Seventeen",
+										"Eighteen", "Nineteen"};
+	String[] tens_multiple = new String[]{"", "", "Twenty", "Thirty", "Forty", 
+											"Fifty","Sixty", "Seventy", 
+											"Eighty", "Ninety"};
+
+	String[] tens_power = new String[] {"Hundred", "Thousand"};
+	if (len == 1) 
+	{
+		System.out.println(single_digits[num[0] - '0']);
+		return;
+	}
+	int x = 0;
+	while (x < num.length) 
+	{
+	if (len >= 3)
+		{
+			if (num[x]-'0' != 0)
+			{
+				System.out.print(single_digits[num[x] - '0']+" ");
+				System.out.print(tens_power[len - 3]+" "); 
+			}
+			len--;
+		}
+		else
+		{
+			if (num[x] - '0' == 1) 
+			{
+				int sum = (num[x] - 48 )+ (num[x+1] -48);
+				System.out.println(two_digits[sum]);
+				return;
+			}
+			else if (num[x] - '0' == 2 && 
+					num[x + 1] - '0' == 0)
+			{
+				System.out.println("twenty");
+				return;
+			}
+			else
+			{
+				int i = (num[x] - '0');
+				if(i > 0)
+				System.out.print(tens_multiple[i]+" ");
+				else
+				System.out.print("");
+				x++;
+				if (num[x] - '0' != 0)
+					System.out.println(single_digits[num[x] - '0']);
+			}
+		}
+		x++;
+	}
+}
+public static void main(String[] args)
+{
+     Scanner s=new Scanner(System.in);
+     String str=s.next();
+convert_to_words(str.toCharArray());
+}
+}
+
+****************************************************************************************
+
+
+def convert_to_words(num):
+	l = len(num); 
+	single_digits = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+	two_digits = ["", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen","Nineteen"];
+	tens_multiple = ["", "", "Twenty", "Thirty", "Forty","Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+	tens_power = ["Hundred", "Thousand"];
+	if (l == 1): 
+		print(single_digits[ord(num[0]) - 48]);
+		return;
+	x = 0;
+	while (x < len(num)): 
+		if (l >= 3):
+			if (ord(num[x]) - 48 != 0):
+				print(single_digits[ord(num[x]) - 48],end = " ");
+				print(tens_power[l - 3], end = " "); 
+			l -= 1;
+		else:
+ 
+			if (ord(num[x]) - 48 == 1): 
+				sum = (ord(num[x]) - 48 +
+					ord(num[x+1]) - 48);
+				print(two_digits[sum]);
+				return;
+			elif (ord(num[x]) - 48 == 2 and
+				ord(num[x + 1]) - 48 == 0):
+				print("twenty");
+				return;
+			else:
+				i = ord(num[x]) - 48;
+				if(i > 0):
+					print(tens_multiple[i], end = " ");
+				else:
+					print("", end = "");
+				x += 1;
+				if(ord(num[x]) - 48 != 0):
+					print(single_digits[ord(num[x]) - 48]);
+		x += 1;
+convert_to_words(input());

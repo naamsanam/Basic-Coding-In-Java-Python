@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main
+{
+    public static int  convert(int oct) {
+    int dec = 0, i = 0;
+    int bin = 0;
+    while (oct != 0) {
+        dec += (oct % 10) * Math.pow(8, i);
+        i++;
+        oct /= 10;
+    }
+    i = 1;
+    while (dec != 0) {
+        bin += (dec % 2) * i;
+        dec /= 2;
+        i *= 10;
+    }
+    return bin;
+}
+	public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+     int oct;
+    oct=s.nextInt();
+    System.out.print(convert(oct));
+}
+}
+
+*********************************************************************
+
+octal = input();
+dec = str(int(octal, 8))
+decm = int(dec)
+print(bin(decm)[2:])

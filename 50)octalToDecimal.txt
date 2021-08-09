@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main
+{
+public static int toDecimal(int octal){    
+    int decimal = 0;    
+    int n = 0;    
+    while(true){    
+      if(octal == 0){    
+        break;    
+      } 
+      else {    
+          int temp = octal%10;    
+          decimal += temp*Math.pow(8, n);    
+          octal = octal/10;    
+          n++;    
+       }    
+    }    
+    return decimal;    
+}    
+public static void main(String args[]){      
+   Scanner s = new Scanner(System.in);
+   int octal = s.nextInt();
+   int result = toDecimal(octal);
+   System.out.println(result);
+	}
+}
+
+
+***********************************************************
+
+octal = input();
+dec = str(int(octal, 8));
+print(int(dec));

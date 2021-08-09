@@ -1,0 +1,28 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	int n, reversed = 0, rem, original;
+    Scanner s = new Scanner(System.in);
+    n = s.nextInt();
+    original = n;
+    while (n != 0) {
+        rem = n % 10;
+        reversed = reversed * 10 + rem;
+        n /= 10;
+    }
+    if (original==reversed)
+        System.out.println("Yes");
+    else
+        System.out.println("No");
+	}
+}
+
+
+***************************************************
+
+n=input()
+if(n==n[::-1]):
+    print("Yes")
+else:
+    print("No")

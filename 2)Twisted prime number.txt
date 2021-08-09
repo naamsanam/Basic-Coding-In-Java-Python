@@ -1,0 +1,54 @@
+import java.util.*;
+public class Main
+{
+public static   int prime(int n)
+{
+int s=0,i;
+    for (i = 2; i <= n / 2; ++i) {
+        if (n % i == 0) {
+            s = 1;
+            
+        }
+    }
+    return s;
+}
+
+	public static void main(String[] args) {
+	      Scanner s = new Scanner(System.in);
+	       int n, i, rev=0;
+	       n=s.nextInt();
+    int ans=prime(n);
+    while(n!=0)
+    {
+    rev=rev*10+(n%10);
+    n/=10;
+    }
+    int ans1=prime(rev);
+        if (ans==0 && ans1==0)
+            System.out.printf("Twisted Prime Number");
+        else
+            System.out.printf("Not Twisted Prime Number");
+	}	  
+}
+
+***********************************************************
+
+def prime(n):
+    flag=0
+    for j in range(2, n//2):  
+        if ((n % j) == 0):
+            flag = 1
+            break 
+    return flag
+n=int(input())  
+rev,flag=0,0;
+ans=prime(n)
+while(n>0):  
+    dig=n%10  
+    rev=rev*10+dig  
+    n=n//10 
+ans1=prime(rev)
+if (ans==0 and ans1==0):  
+    print("Twisted Prime Number")  
+else:  
+    print("Not Twisted Prime Number")  

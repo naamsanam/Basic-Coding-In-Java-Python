@@ -1,0 +1,28 @@
+import java.util.*;
+public class Main
+{
+public static void main(String[] args)
+{
+     Scanner s=new Scanner(System.in);
+     String str=s.next();
+     int i;
+    char []ch=str.toCharArray();
+    for(i=0;i<ch.length;i=i+2)
+    {
+        int c=ch[i+1]-'0';
+        while(c--!=0)
+        {
+            System.out.printf("%c",ch[i]);
+        }
+    }
+}
+}
+
+**********************************************************
+
+import re 
+n=input()
+l=re.findall("[a-z]+",n)
+l1=re.findall("[0-9]+",n)
+for i in range(0,len(l)):
+    print(l[i]*int(l1[i]),end="")

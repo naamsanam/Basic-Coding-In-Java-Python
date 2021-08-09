@@ -1,0 +1,41 @@
+import java.util.*;
+public class Main { 
+
+	public static void main(String[] args) 
+	{ 
+	     Scanner s=new Scanner(System.in);
+	     int n = s.nextInt();
+	     int i,j,a;
+        int number[]=new int[n];
+        for(i=0;i < n;i++)
+        {
+            number[i]=s.nextInt();
+        }
+  for (i = 0; i < n; ++i) 
+        {
+            for (j = i + 1; j < n; ++j) 
+            {
+                if (number[i] > number[j]) 
+                {
+                    a = number[i];
+                    number[i] = number[j];
+                    number[j] = a;
+                }
+            }
+        }
+        for (i = 0; i < n; ++i) 
+            System.out.printf("%d ", number[i]);
+        System.out.printf("\n");
+        for (i = n-1; i>=0; i--) 
+            System.out.printf("%d ", number[i]);
+	} 
+}
+
+*****************************************************************
+
+
+n=int(input())
+l=list(map(int,input().split()))
+l.sort()
+print(*l)
+print(*l[::-1])

@@ -1,0 +1,31 @@
+import java.util.*;
+public class Main
+{
+    public static int convert(int bin) {
+    int oct = 0, dec = 0, i = 0;
+    while (bin != 0) {
+        dec += (bin % 10) * Math.pow(2, i);
+        ++i;
+        bin /= 10;
+    }
+    i = 1;
+    while (dec != 0) {
+        oct += (dec % 8) * i;
+        dec /= 8;
+        i *= 10;
+    }
+    return oct;
+}
+	public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+     int bin;
+    bin=s.nextInt();
+    System.out.print(convert(bin));
+}
+}
+
+********************************************************************
+
+n=input()
+c=int(n,2)
+print(oct(c)[2:])

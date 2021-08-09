@@ -1,0 +1,25 @@
+import java.util.*;
+public class Main {
+
+  public static void main(String[] args) {
+    int num;
+    Scanner s = new Scanner(System.in);
+    num = s.nextInt();
+    for (int i = 1; i <= num; ++i) {
+      if (num % i == 0) {
+         System.out.print(i + " ");
+      }
+    }
+  }
+}
+
+
+**************************************************************************
+
+
+def print_factors(x):
+   for i in range(1, x + 1):
+       if x % i == 0:
+           print(i,end=" ")
+num = int(input())
+print_factors(num)

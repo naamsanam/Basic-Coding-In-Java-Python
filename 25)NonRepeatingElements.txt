@@ -1,0 +1,40 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[])
+    {
+        int i, j,ctr,k;
+        Scanner sc=new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr1[]=new int[1000];
+        for(i=0;i < n;i++)
+        {
+            arr1[i]=sc.nextInt();
+        }
+         for(i=0; i<n; i++)
+    {
+        ctr=0;
+        for(j=0,k=n; j<k+1; j++)
+        {
+        if (i!=j)
+            {
+		       if(arr1[i]==arr1[j])
+              {
+                 ctr++;
+               }
+             }
+        }
+       if(ctr==0)
+        {
+          System.out.printf("%d ",arr1[i]);
+        }
+    }
+    }
+}
+
+**************************************************************************
+
+n=int(input())
+l=list(map(int,input().split()))
+for i in l:
+    if(l.count(i)==1):
+        print(i,end=" ")

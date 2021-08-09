@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main { 
+
+	public static void main(String[] args) 
+	{ 
+	     Scanner s=new Scanner(System.in);
+	     String str=s.nextLine();
+	     String str1=s.next();
+	     String res=str.replace(str1,"");
+	     System.out.println(res);   
+	} 
+} 
+
+
+************************************************************************
+
+n=input()
+k=input()
+for i in n:
+    if i!=k:
+        print(i,end="")

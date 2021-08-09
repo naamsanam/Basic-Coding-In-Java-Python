@@ -1,0 +1,28 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	  int num;
+      Scanner s = new Scanner(System.in);
+      num = s.nextInt();
+     for(int i = 2; i< num; i++) {
+         while(num%i == 0) {
+            System.out.print(i+" ");
+            num = num/i;
+         }
+      }
+      if(num >2)
+         System.out.print(num);
+	}
+}
+
+
+***********************************************************************
+
+
+n=int(input())
+for i in range(2,n+1):
+    while(n%i==0):
+        print(i,end=" ")
+        n//=i
+    

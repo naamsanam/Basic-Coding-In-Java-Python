@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main
+{
+
+	public static void main(String[] args) {
+	      Scanner s = new Scanner(System.in);
+	    int n,i,j;
+	    n=s.nextInt();
+for(i=n;i>=1;i--,System.out.printf("\n"))
+{
+    for(j=1;j<2*i;j++)
+    System.out.printf("*");
+}
+}
+}
+
+***************************************************************
+
+n=int(input())
+for i in range(n,0,-1):
+    for j in range(1,2*i):
+        print("*",end="")
+    print()
